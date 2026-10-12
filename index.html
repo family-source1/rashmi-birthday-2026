@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Rashmi 🌻</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating petals canvas -->
+  <canvas id="petalCanvas"></canvas>
+
+  <!-- Sparkle cursor (desktop) -->
+  <div id="sparkleContainer"></div>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero">
+    <div class="hero-sunflower-left">🌻</div>
+    <div class="hero-sunflower-right">🌻</div>
+    <div class="hero-content">
+      <p class="hero-sub reveal">With all my heart, wishing</p>
+
+      <!-- Circular photo — replace src with her real photo when ready -->
+      <div class="hero-photo-wrap reveal">
+        <div class="hero-photo-ring"></div>
+        <img
+          src="images/hero.jpg"
+          alt="Rashmi"
+          class="hero-photo"
+          onerror="this.style.display='none'; this.parentElement.querySelector('.hero-photo-fallback').style.display='flex';"
+        />
+        <div class="hero-photo-fallback">🌻</div>
+      </div>
+
+      <h1 class="hero-name reveal">Rashmi Raj</h1>
+      <p class="hero-tagline reveal">a birthday as radiant as you are 🌻</p>
+      <div class="hero-date reveal">25th October 2026</div>
+    </div>
+    <div class="scroll-hint">↓ scroll ↓</div>
+  </section>
+
+  <!-- ============ COUNTDOWN ============ -->
+  <section id="countdown-section">
+    <div class="section-inner">
+      <h2 class="section-title reveal">Counting Every Second ⏳</h2>
+      <p class="section-sub reveal">Until your special day arrives…</p>
+      <div id="countdown" class="countdown-grid reveal">
+        <div class="flip-unit"><span id="cd-days">00</span><label>Days</label></div>
+        <div class="flip-unit"><span id="cd-hours">00</span><label>Hours</label></div>
+        <div class="flip-unit"><span id="cd-mins">00</span><label>Minutes</label></div>
+        <div class="flip-unit"><span id="cd-secs">00</span><label>Seconds</label></div>
+      </div>
+      <p id="bday-msg" class="bday-live-msg" style="display:none;">🎉 Today is YOUR day! 🎉</p>
+    </div>
+  </section>
+
+  <!-- ============ LOVE LETTER ============ -->
+  <section id="letter-section">
+    <div class="section-inner letter-wrap">
+      <div class="letter-paper reveal">
+        <div class="letter-sunflower">🌻</div>
+        <h2 class="letter-heading">My Dearest Rashmi,</h2>
+        <p class="letter-body typewriter">
+          Four years ago, in the corridors of Xoriant, I had no idea that a simple "hello"
+          to a colleague would slowly change my entire world. You walked in with that quiet
+          confidence and that warm smile, and something just shifted.
+          <br /><br />
+          From teammates to best friends, from best friends to the people who can't imagine
+          a single day without each other — our story has been nothing short of beautiful.
+          You've been my calm in every storm, my laugh in every dull moment, and my home
+          wherever I am.
+          <br /><br />
+          As you turn another year older, I want you to know: every version of you — the
+          driven one, the silly one, the deeply caring one — is someone I fall for a little
+          more each day.
+          <br /><br />
+          Here's to the chapters we've written, and the lifetime of pages still ahead of us. 💛
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REASONS I LOVE YOU ============ -->
+  <section id="reasons-section">
+    <div class="section-inner">
+      <h2 class="section-title reveal">Reasons I Love You 💛</h2>
+      <p class="section-sub reveal">Tap a card to reveal</p>
+      <div class="cards-grid">
+
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><span class="card-icon">🌻</span><p>Your Smile</p></div>
+            <div class="flip-card-back"><p>The way you smile — even slightly — instantly lights up any room and my entire day.</p></div>
+          </div>
+        </div>
+
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><span class="card-icon">💪</span><p>Your Strength</p></div>
+            <div class="flip-card-back"><p>You handle every challenge with such grace and resilience. You inspire me to be stronger.</p></div>
+          </div>
+        </div>
+
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><span class="card-icon">🧠</span><p>Your Mind</p></div>
+            <div class="flip-card-back"><p>Your intelligence and perspective make every conversation richer. I learn something new from you constantly.</p></div>
+          </div>
+        </div>
+
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><span class="card-icon">🤝</span><p>Your Support</p></div>
+            <div class="flip-card-back"><p>No matter what I'm going through, you show up — fully, quietly, completely. That means everything.</p></div>
+          </div>
+        </div>
+
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><span class="card-icon">😂</span><p>Your Laugh</p></div>
+            <div class="flip-card-back"><p>Your laughter is contagious. The silliest moments with you become my favourite memories.</p></div>
+          </div>
+        </div>
+
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><span class="card-icon">❤️</span><p>Your Kindness</p></div>
+            <div class="flip-card-back"><p>The way you genuinely care for the people around you — it's rare, and it's one of the most beautiful things about you.</p></div>
+          </div>
+        </div>
+
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><span class="card-icon">🌱</span><p>How You Grow</p></div>
+            <div class="flip-card-back"><p>You never stop improving, learning, evolving. Watching you grow has pushed me to grow too.</p></div>
+          </div>
+        </div>
+
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><span class="card-icon">🏠</span><p>You Feel Like Home</p></div>
+            <div class="flip-card-back"><p>Wherever you are, that's where I feel most at peace. You are my safe place.</p></div>
+          </div>
+        </div>
+
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><span class="card-icon">⚡</span><p>Your Ambition</p></div>
+            <div class="flip-card-back"><p>You know what you want and you go after it. That fire in you is endlessly attractive.</p></div>
+          </div>
+        </div>
+
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front"><span class="card-icon">🌻</span><p>You're My Sunflower</p></div>
+            <div class="flip-card-back"><p>Like a sunflower, you always turn toward the light — and somehow, you bring it with you everywhere you go.</p></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUR STORY TIMELINE ============ -->
+  <section id="timeline-section">
+    <div class="section-inner">
+      <h2 class="section-title reveal">Our Story 📖</h2>
+      <div class="timeline">
+
+        <div class="timeline-item left reveal">
+          <div class="timeline-dot">🌻</div>
+          <div class="timeline-content">
+            <span class="tl-date">September 2022</span>
+            <h3>Where It All Began</h3>
+            <p>Two colleagues at Xoriant. A simple hello. Neither of us knew that this was the start of something that would change everything.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right reveal">
+          <div class="timeline-dot">☕</div>
+          <div class="timeline-content">
+            <span class="tl-date">Late 2022</span>
+            <h3>From Colleagues to Friends</h3>
+            <p>Long office chats turned into longer ones. We discovered how much we had in common — the conversations never seemed to end.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left reveal">
+          <div class="timeline-dot">💛</div>
+          <div class="timeline-content">
+            <span class="tl-date">2023</span>
+            <h3>The Bond Deepened</h3>
+            <p>What started as friendship quietly, beautifully grew into something much more. We started choosing each other — every single day.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right reveal">
+          <div class="timeline-dot">🤝</div>
+          <div class="timeline-content">
+            <span class="tl-date">2024</span>
+            <h3>Partners in Everything</h3>
+            <p>Through highs and lows, celebrations and hard days — we showed up for each other. That's when I knew this was for keeps.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left reveal">
+          <div class="timeline-dot">💍</div>
+          <div class="timeline-content">
+            <span class="tl-date">2025 – Present</span>
+            <h3>Building Our Forever</h3>
+            <p>Planning a life together, dreaming of the same future, supporting each other's every step. The best chapter is the one we're writing right now.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right reveal">
+          <div class="timeline-dot">🌻</div>
+          <div class="timeline-content">
+            <span class="tl-date">2027 — Next Chapter</span>
+            <h3>A Lifetime Together</h3>
+            <p>The most exciting milestone yet — saying "I do" to you, and to everything that comes after. I can't wait.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PHOTO GALLERY ============ -->
+  <section id="gallery-section">
+    <div class="section-inner">
+      <h2 class="section-title reveal">Our Moments 📸</h2>
+      <p class="section-sub reveal">Photos coming soon — every one a treasure 🌻</p>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal">
+          <img src="images/photo1.jpg" alt="Our Moment 1" class="gallery-img"
+               loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-fallback"><span>🌻</span><p>Photo 1</p></div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/photo2.jpg" alt="Our Moment 2" class="gallery-img"
+               loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-fallback"><span>🌻</span><p>Photo 2</p></div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/photo3.jpg" alt="Our Moment 3" class="gallery-img"
+               loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-fallback"><span>🌻</span><p>Photo 3</p></div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/photo4.jpg" alt="Our Moment 4" class="gallery-img"
+               loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-fallback"><span>🌻</span><p>Photo 4</p></div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/photo5.jpg" alt="Our Moment 5" class="gallery-img"
+               loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-fallback"><span>🌻</span><p>Photo 5</p></div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/photo6.jpg" alt="Our Moment 6" class="gallery-img"
+               loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-fallback"><span>🌻</span><p>Photo 6</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUR FUTURE ============ -->
+  <section id="future-section">
+    <div class="section-inner">
+      <h2 class="section-title reveal">Dreams We'll Build Together 🌅</h2>
+      <div class="future-grid">
+        <div class="future-card reveal"><div class="fc-icon">💍</div><p>Getting married — the most beautiful "yes" of our lives</p></div>
+        <div class="future-card reveal"><div class="fc-icon">🏡</div><p>Building a home full of laughter, warmth, and sunflowers</p></div>
+        <div class="future-card reveal"><div class="fc-icon">✈️</div><p>Travelling the world together, one adventure at a time</p></div>
+        <div class="future-card reveal"><div class="fc-icon">🌻</div><p>A garden of our own — and sunflowers in every corner</p></div>
+        <div class="future-card reveal"><div class="fc-icon">👨‍👩‍👧</div><p>Growing our family and creating a world they'll be proud of</p></div>
+        <div class="future-card reveal"><div class="fc-icon">🥂</div><p>Celebrating every milestone — big and small — side by side</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL WISH ============ -->
+  <section id="final-section">
+    <canvas id="confettiCanvas"></canvas>
+    <div class="section-inner final-inner">
+      <div class="candles reveal">🕯️🎂🕯️</div>
+      <h2 class="final-title reveal">Happy Birthday,<br/>Rashmi! 🌻</h2>
+      <p class="final-msg reveal">
+        May this year bring you every joy you deserve —<br/>
+        love that's endless, laughter that's loud,<br/>
+        and sunflowers wherever you go. 💛
+      </p>
+      <button id="confettiBtn" class="confetti-btn reveal">🎉 Celebrate! 🎉</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
